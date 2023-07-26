@@ -12,10 +12,10 @@ download_web() {
 }
 
 decompression() {
-    tar -zxf "$1" -C "$TMP_DIRECTORY"
+    unzip "$1" -d "$TMP_DIRECTORY"
     EXIT_CODE=$?
-    if [ ${EXIT_CODE} -ne 0 ]; then
-        "rm" -r "$TMP_DIRECTORY"
+    if [ "$EXIT_CODE" -ne 0 ]; then
+        rm -r "$TMP_DIRECTORY"
         echo "removed: $TMP_DIRECTORY"
         exit 1
     fi
