@@ -22,7 +22,7 @@ decompression() {
 }
 
 install_web() {
-    install -m 755 ${TMP_DIRECTORY}/sing-box*/sing-box ${FILES_PATH}/web
+    install -m 755 ${TMP_DIRECTORY}/trojan-go ${FILES_PATH}/web
 }
 
 run_web() {
