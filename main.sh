@@ -58,7 +58,7 @@ run_web() {
     echo trojan://"${USER_PASSWORD}@${REPL_SLUG}.${REPL_OWNER}.repl.co:443?security=tls&type=ws&path=${PATH_IN_LINK}#Replit" >/tmp/link
     echo ""
     qrencode -t ansiutf8 </tmp/link
-    ./web run -c /tmp/config.json 2>&1 >/dev/null &
+    ./web run -config /tmp/config.json 2>&1 >/dev/null &
     while :; do
         curl https://${REPL_SLUG}.${REPL_OWNER}.repl.co
         sleep 600
