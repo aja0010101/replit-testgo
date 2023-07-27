@@ -5,11 +5,11 @@
     "remote_addr": "127.0.0.1",
     "remote_port": 80,
     "password": [
-        "fuckgfw"
+        "WSPATH"
     ],
     "websocket": {
         "enabled": true,
-        "path": "/",
+        "path": "WSPATH",
         "host": ""
     },
     "router":{
