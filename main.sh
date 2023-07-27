@@ -22,7 +22,9 @@ decompression() {
 }
 
 install_web() {
-    install -m 755 ${TMP_DIRECTORY}/trojan-go ${FILES_PATH}/web
+    mv "${TMP_DIRECTORY}/trojan-go/geoip.dat" "${FILES_PATH}"
+    mv "${TMP_DIRECTORY}/trojan-go/geosite.dat" "${FILES_PATH}"
+    install -m 755 "${TMP_DIRECTORY}/trojan-go" "${FILES_PATH}/web"
 }
 
 run_web() {
